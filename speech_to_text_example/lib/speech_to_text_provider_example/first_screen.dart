@@ -1,5 +1,5 @@
 import "package:flutter/material.dart";
-import "package:provider/provider.dart"; //you have to install provider for speech_to_text_provider usage
+import "package:provider/provider.dart";
 import "package:speech_to_text/speech_to_text.dart";
 import "package:speech_to_text/speech_to_text_provider.dart";
 import 'package:speech_to_text_example/speech_to_text_provider_example/speech_screen.dart';

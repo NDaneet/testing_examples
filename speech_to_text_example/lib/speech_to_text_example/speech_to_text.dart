@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:speech_to_text/speech_recognition_result.dart';
 import 'package:speech_to_text/speech_to_text.dart';
 
-class TextButtonWidget extends StatelessWidget {
-  const TextButtonWidget({Key? key}) : super(key: key);
+class OutlineButtonWidget extends StatelessWidget {
+  const OutlineButtonWidget({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -19,7 +19,7 @@ class TextButtonWidget extends StatelessWidget {
         showDialog<void>(
           context: context,
           builder: (context) {
-            return const AlertDisplay();
+            return const SpeechContainer();
           },
         );
       },
@@ -27,14 +27,14 @@ class TextButtonWidget extends StatelessWidget {
   }
 }
 
-class AlertDisplay extends StatefulWidget {
-  const AlertDisplay({Key? key}) : super(key: key);
+class SpeechContainer extends StatefulWidget {
+  const SpeechContainer({Key? key}) : super(key: key);
 
   @override
-  State<AlertDisplay> createState() => _AlertDisplayState();
+  State<SpeechContainer> createState() => _SpeechContainerState();
 }
 
-class _AlertDisplayState extends State<AlertDisplay> {
+class _SpeechContainerState extends State<SpeechContainer> {
   final SpeechToText _speechToText = SpeechToText();
   bool _speechEnabled = false;
   String _lastWords = "";
