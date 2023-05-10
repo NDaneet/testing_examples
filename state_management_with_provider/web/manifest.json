@@ -1,6 +1,6 @@
 {
-    "name": "custom_provider_example",
-    "short_name": "custom_provider_example",
+    "name": "state_management_with_provider",
+    "short_name": "state_management_with_provider",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

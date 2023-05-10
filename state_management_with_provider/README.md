@@ -1,4 +1,4 @@
-# custom_provider_example
+# state_management_with_provider
 
 A new Flutter project.
 
