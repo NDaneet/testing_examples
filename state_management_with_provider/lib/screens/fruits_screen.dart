@@ -55,16 +55,20 @@ SliverChildDelegate _buildFruitsList(BuildContext context) {
   for (Fruit fruit in Fruits.fruitsList) {
     fruitListTile.add(
       FruitListTile(
-        favoriteIcon: favoriteModel.containsFavorite(fruit)
+        trailing: IconButton(
+          icon: favoriteModel.containsFavourite(fruit)
             ? const Icon(Icons.favorite)
             : const Icon(Icons.favorite_border_outlined),
-        fruitName: fruit.fruitName,
-        fruitAssetLocation: fruit.fruitAssetLocation,
-        onPressed: () {
-          favoriteModel.containsFavorite(fruit)
+          color: Colors.red,
+          iconSize: 30,
+          onPressed: () {
+          favoriteModel.containsFavourite(fruit)
           ? favoriteModel.removeFavouriteFruit(fruit)
           : favoriteModel.addFavouriteFruit(fruit);
-        }
+        },
+        ),
+        fruitName: fruit.fruitName,
+        fruitAssetLocation: fruit.fruitAssetLocation,
           )
       );
   }

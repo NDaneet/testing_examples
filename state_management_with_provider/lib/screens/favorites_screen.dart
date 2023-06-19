@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import '../components/favorite_listtile.dart';
+import '../components/fruit_listtile.dart';
 import '../model/favourites_model.dart';
 import '../model/fruits_model.dart';
 
@@ -45,10 +45,10 @@ class FavouriteScreen extends StatelessWidget {
 
   SliverChildDelegate _buildFavouriteFruitsList(BuildContext context){
     FavouriteModel favouriteList = Provider.of<FavouriteModel>(context);
-    final List<FavouriteFruitListTile> favouriteFruitListTile = [];
+    final List<FruitListTile> favouriteFruitListTile = [];
   for (Fruit fruit in favouriteList.favoriteFruits) {
     favouriteFruitListTile.add(
-      FavouriteFruitListTile(
+      FruitListTile(
         fruitName: fruit.fruitName,
         fruitAssetLocation: fruit.fruitAssetLocation,));
   }
