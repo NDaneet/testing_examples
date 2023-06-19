@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:state_management_with_provider/model/favourites_model.dart';
+import '../model/favourites_model.dart';
 import "../model/fruits_model.dart";
 import '../components/fruit_listtile.dart';
 
@@ -50,7 +50,7 @@ Widget _appBar(BuildContext context) {
 }
 
 SliverChildDelegate _buildFruitsList(BuildContext context) {
-  final favoriteModel = Provider.of<FavouriteModel>(context);
+  final favoriteModel = Provider.of<FavouriteModel>(context, listen: false);
   final List<FruitListTile> fruitListTile = [];
   for (Fruit fruit in Fruits.fruitsList) {
     fruitListTile.add(
