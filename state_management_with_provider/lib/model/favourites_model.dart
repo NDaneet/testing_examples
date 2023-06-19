@@ -1,5 +1,3 @@
-
-import 'package:flutter/widgets.dart';
 import "package:flutter/foundation.dart";
 import 'fruits_model.dart';
 
@@ -9,12 +7,12 @@ class FavouriteModel extends ChangeNotifier{
 
   get favoriteFruits => _favoriteFruits;
 
-   bool containsFavorite(Fruit fruit) {
+   bool containsFavourite(Fruit fruit) {
     return _favoriteFruits.contains(fruit);
    }
 
   void addFavouriteFruit(Fruit fruit){
-    if (!_favoriteFruits.contains(fruit)){
+    if (!containsFavourite(fruit)){
       _favoriteFruits.add(fruit);
     }
     notifyListeners();

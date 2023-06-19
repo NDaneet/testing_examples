@@ -1,3 +1,11 @@
+class Fruit {
+  Fruit(this.fruitName, this.fruitAssetLocation);
+
+  String fruitName;
+  String fruitAssetLocation;
+}
+
+
 class Fruits {
   static Map<String, String> fruitsMap = {
     "Almond": "assets/almond.png",
@@ -24,9 +32,3 @@ class Fruits {
       .toList();
 }
 
-class Fruit {
-  Fruit(this.fruitName, this.fruitAssetLocation);
-
-  String fruitName;
-  String fruitAssetLocation;
-}
