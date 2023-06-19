@@ -1,7 +1,7 @@
 import "package:flutter/material.dart";
 import "package:provider/provider.dart";
 import "model/favourites_model.dart";
-import "screens/favorites_screen.dart";
+import 'screens/favourites_screen.dart';
 import "screens/fruits_screen.dart";
 
 void main() {
