@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-
 import 'package:shared_preferences/shared_preferences.dart';
-
 import 'custom_pop_up_menu.dart';
 
 class Home extends StatefulWidget {
@@ -86,7 +84,7 @@ class _HomeState extends State<Home> {
             IconButton(
               icon: const Icon(Icons.search),
               onPressed: () {
-                addSearchItem(searchTextController.text);
+                searchItem(searchTextController.text);
                 final currentFocus = FocusScope.of(context);
                 if (!currentFocus.hasPrimaryFocus) {
                   currentFocus.unfocus();
@@ -103,7 +101,7 @@ class _HomeState extends State<Home> {
                   autofocus: false,
                   textInputAction: TextInputAction.done,
                   onSubmitted: (value) {
-                    addSearchItem(searchTextController.text);
+                    searchItem(searchTextController.text);
                   },
                   controller: searchTextController),
             ),
@@ -114,7 +112,7 @@ class _HomeState extends State<Home> {
               ),
               onSelected: (value) {
                 searchTextController.text = value;
-                addSearchItem(searchTextController.text);
+                searchItem(searchTextController.text);
               },
               itemBuilder: (context) {
                 return previousSearches
@@ -139,7 +137,7 @@ class _HomeState extends State<Home> {
     );
   }
 
-  void addSearchItem(String value) {
+  void searchItem(String value) {
     value = value.trim();
     if (!previousSearches.contains(value)) {
       previousSearches.add(value);
