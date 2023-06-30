@@ -3,23 +3,23 @@ import 'fruits_model.dart';
 
 class FavouriteModel extends ChangeNotifier{
 
-  final List<Fruit> _favoriteFruits = [];
+  final List<Fruit> _favouriteFruits = [];
 
-  get favoriteFruits => _favoriteFruits;
+  get favouriteFruits => _favouriteFruits;
 
    bool containsFavourite(Fruit fruit) {
-    return _favoriteFruits.contains(fruit);
+    return _favouriteFruits.contains(fruit);
    }
 
   void addFavouriteFruit(Fruit fruit){
     if (!containsFavourite(fruit)){
-      _favoriteFruits.add(fruit);
+      _favouriteFruits.add(fruit);
     }
     notifyListeners();
   }
 
   void removeFavouriteFruit(Fruit fruit){
-    _favoriteFruits.remove(fruit);
+    _favouriteFruits.remove(fruit);
     notifyListeners();
   }
 }
