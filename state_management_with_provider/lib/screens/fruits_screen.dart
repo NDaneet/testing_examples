@@ -50,7 +50,7 @@ Widget _appBar(BuildContext context) {
 }
 
 SliverChildDelegate _buildFruitsList(BuildContext context) {
-  final favoriteModel = Provider.of<FavouriteModel>(context, listen: false);
+  final favoriteModel = Provider.of<FavouriteModel>(context);
   final List<FruitListTile> fruitListTile = [];
   for (Fruit fruit in Fruits.fruitsList) {
     fruitListTile.add(
