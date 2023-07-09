@@ -10,11 +10,11 @@ class MyApp extends StatelessWidget {
   MyApp({super.key});
 
 
-  final _route = AppRouter.route;
+  final _route = AppRouter();
   @override
   Widget build(BuildContext context) {
     return MaterialApp.router(
-      routerConfig: _route,
+      routerConfig: _route.route,
     );
   }
 }
