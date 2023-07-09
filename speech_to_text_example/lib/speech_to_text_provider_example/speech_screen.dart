@@ -63,7 +63,7 @@ class MicrophoneScreen extends StatelessWidget {
                     : OutlinedButton(
                         child: const Text("Try Again"),
                         style: OutlinedButton.styleFrom(
-                          onSurface: Colors.blue,
+                          disabledForegroundColor: Colors.blue,
                           textStyle: const TextStyle(fontSize: 12),
                         ),
                         onPressed: () {},
