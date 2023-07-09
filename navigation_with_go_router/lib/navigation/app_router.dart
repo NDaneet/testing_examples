@@ -6,7 +6,7 @@ import "../screens/first_screen.dart";
 import "../screens/second_screen.dart";
 
 class AppRouter {
-  static final route = GoRouter(
+  final route = GoRouter(
       routes: [
       
         GoRoute(
